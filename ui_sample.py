@@ -4,7 +4,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 # Now you can access your API keys (and other environment variables)
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv('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')
 
 import openai
 import pandas as pd
@@ -14,35 +14,35 @@ import pandas as pd
 
 def ask_question(prompt):
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo",  # you can replace this with your preferred model
+        model="gpt-3.5-turbo-16k",  # you can replace this with your preferred model
         messages=[{"role": "user", "content": prompt}],
         max_tokens=500
     )
     return completion.choices[0].message.content
 
-def interact_with_ai(message, model="gpt-3.5-turbo"):
-    prompt = f"You are a hosting advisor and you role is to reply in few words to the {message} just to keep the user engaged and make him feel that he is interacting with someone."
+def interact_with_ai(message, model="gpt-3.5-turbo-16k"):
+    prompt = f"Please provide a brief response to the following question to maintain the conversation flow. Do not give any advice at this stage.\nQuestion: {message}"
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo",  # you can replace this with your preferred model
+        model="gpt-3.5-turbo-16k",  # you can replace this with your preferred model
         messages=[{"role": "user", "content": prompt}],
         max_tokens=150
     )
     return completion.choices[0].message.content
 
 
-def recommend_hosting_with_ai(dialog, data_csv):
+def recommend_hosting_with_ai(dialog, ai_tooolss_csv):
     # Read the CSV data into a string format suitable for the prompt
-    hosting_data = pd.read_csv(data_csv)
+    hosting_data = pd.read_csv(ai_tooolss_csv)
     hosting_data_string = hosting_data.to_string(index=False)
 
     # Construct the prompt
     prompt = (f"Based on the following user answers:\n{dialog}\n\n"
-              f"And the following hosting service data:\n{hosting_data_string}\n\n"
-              "Suggest the best hosting service and return the name, link, and explanation in JSON format.")
+              f"And using ONLY the following AI tools data:\n{hosting_data_string}\n\n"
+              "Recommend which AI tools to use. Your recommendations should be based solely on the provided data and not on external knowledge. Please return their names, links, and a brief explanation for each recommendation.")
 
     # Call the OpenAI API
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo",  
+        model="gpt-3.5-turbo-16k",  
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -51,28 +51,23 @@ def recommend_hosting_with_ai(dialog, data_csv):
 
 
 def main():
-    st.title("Hosting Service Advisor")  # Set a title for your app
+    st.title("AI tool advisor for students")  # Set a title for your app
 
     # Load hosting data from CSV
-    file_path = 'data.csv'  # Update this with the path to your CSV file
+    file_path = 'ai_tooolss.csv'  # Update this with the path to your CSV file
 
     # Define the questions you're going to ask the user
     # Questions to ask the user
     questions = [
-        "What is your monthly budget for web hosting?",
-        "How much traffic do you expect your website to have? (e.g., low, medium, high)",
-        "What is the primary purpose of your website? (e.g., blog, e-commerce, portfolio)",
-        "How would you rate your technical expertise with web hosting and website management? (e.g., beginner, intermediate, advanced)",
-        "How important is 24/7 customer support to you?",
-        "Are you looking for a hosting service that provides high performance and speed?",
-        "Do you anticipate needing to upgrade your hosting plan as your website grows?",
-        "Do you have a preference for where your server is located geographically?",
-        "Are there any additional features you’re looking for, such as free domain registration, email hosting, or SSL certificates?",
-        "Have you used any web hosting services before? If so, what did you like or dislike about them?"
+        "What is your budget for using AI tools? (e.g., free, premium with specific monthly/annual budget)",
+        "What specific tasks or needs do you have for an AI tool? (e.g., writing assistance, finding papers, data analysis, presentation creation)",
+        "What is your level of expertise with AI tools? (e.g., beginner, intermediate, advanced)",
+        "How often do you anticipate using AI tools? (e.g., daily, weekly, occasionally)",
+        "Are there specific features you are looking for in an AI tool? (e.g. plagiarism checking, quick web research, text summarization, voice transcripts, mind-maps, word clouds)"
     ]
     dialog = ""  # Initialize an empty string to hold the dialog
 
-    st.write("Welcome to the Hosting Service Advisor!")  # Display a welcome message
+    st.write("Welcome to the AI tool advisor for Tilburg University students!")  # Display a welcome message
 
     # Create input boxes for each question
     for question in questions:
@@ -86,10 +81,10 @@ def main():
             brief_reply = interact_with_ai(dialog)
             st.text_area("Advisor:", value=f"{brief_reply}", key=f"reply_{question}")
 
-    if st.button('Get Hosting Recommendation'):  # Add a button to trigger recommendation
+    if st.button('Get AI tool Recommendation'):  # Add a button to trigger recommendation
         if dialog:  # Ensure there's a dialog to process
             recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
-            st.text_area("Recommended Hosting Service", value=recommended_hosting, height=300)
+            st.text_area("Recommended AI tool(s)", value=recommended_hosting, height=300)
 
 # The below line ensures that when you run the script, it calls the main() function
 if __name__ == "__main__":
