@@ -38,7 +38,7 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools2_csv):
 # construct the prompt
     prompt = (f"Based on the following user answers:\n{dialog}\n\n"
           f"You are an AI tool advisor. Use the following AI tools data to find matches. Prioritize tools that have features closely matching the user's request:\n{hosting_data_string}\n\n"
-          "Recommend AI tools that best fit the user's specified needs. List maximum 5 tools starting with the best recommendation to the least best recommendation. For each tool, provide the tool name in **bold**, followed by sections for **Pricing**, **Website**, and **Explanation**, each labeled in **bold**. Explain why each tool is a good match based on the features mentioned. Note: Recommendations should be based solely on the provided data and not on external knowledge.\n\n"
+          "Recommend AI tools that best fit the user's specified needs. List maximum 7 tools starting with the best recommendation to the least best recommendation. For each tool, provide the tool name in **bold**, followed by sections for **Pricing**, **Website**, and **Explanation**, each labeled in **bold**. Explain why each tool is a good match based on the features mentioned. Note: Recommendations should be based solely on the provided data and not on external knowledge.\n\n"
           "Inform the user that these recommendations are based on the article 'The 20 Best AI Tools' from tilburg.ai and for more options to find specific AI tools, they can visit: https://www.futuretools.io/")
 
 
@@ -81,7 +81,7 @@ def main():
 
     if st.button('Get AI tool Recommendation', key='get_recommendation') and all_answered:
         # Display a message indicating that the recommendation is being generated
-        with st.spinner('Generating recommendations... This may take up to 1 to 2 minutes to get the best results. Thank you for your patience.'):
+        with st.spinner('Generating recommendations... This may take up to 1 minute to get the best results. Thank you for your patience.'):
             dialog = "\n".join(f"Q: {q}\nA: {a}" for q, a in user_responses.items())
             recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
         # Indentation starts here for the block under the if statement
