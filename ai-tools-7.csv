@@ -1,0 +1,300 @@
+﻿Tool Name,Features,Suitable For,Pros,Pricing,
+ChatGPT,"Natural Language Understanding Contextual Awareness
+Conversational Skills
+Text Generation
+Multi-Turn Conversations
+Language Translation
+Creative Writing
+Legal Document Drafting",Individuals seeking assistance with various tasks,"Time-saving: ChatGPT automates tasks and saves time.
+24/7 support: ChatGPT can be available 24/7 for customer support.
+Scalability: ChatGPT can handle high volumes of conversations.
+Enhanced user experience: ChatGPT provides a human-like interaction.
+Improves efficiency: ChatGPT provides accurate information and reduces research time.
+",Free to use however to get the best results you need to have ChatGPT Plus which costs 20 dollar,
+Bing Chat,"Virtual Assistant Functionality Data Retrieval from the Web
+Understands and Answers User Queries
+Voice Input
+Content Generation
+Image Generation
+Summarized Answers to Complex Questions","Individuals and professionals seeking a free AI chatbot
+Writers, marketers, and researchers looking for content generation and research assistance","Free to use with a Microsoft account Runs on the powerful GPT-4 AI model
+Offers a user-friendly interface
+Allows voice input
+Provides references for precise content generation
+Offers suggestions for conversational starters based on timely topics",Free to use with a Microsoft account,
+Perplexity AI,"Natural Language Understanding
+Contextual Awareness
+Conversational Skills
+Text Generation
+Copilot Usage
+Dedicated Support
+Updated Information","Students seeking homework assistance and research projects
+Professionals seeking to stay updated with industry trends, find new ideas, and create content
+Anyone seeking up-to-date answers on a diverse range of topics","Offers up-to-date information on any topic
+Provides an intuitive user interface ideal for beginners and professional users
+Offers unlimited copilot usage
+Provides access to GPT-4
+Offers dedicated support
+Provides updated information","Free plan with limited functionality
+Premium plan: $20/month or $200/year, includes unlimited copilot usage, GPT-4 access, dedicated support, and updated information",
+Quillbot,"Paraphrasing
+Summarizing
+Plagiarism Checking
+Translation
+Browser Extensions (Chrome, Microsoft Word, macOS)
+User-Friendly Interface
+Grammar Checking
+Content Summarization
+Citation Creation","Students, academics, and writers looking to improve their writing
+Individuals seeking a tool for paraphrasing, summarizing, and plagiarism checking
+Users of Microsoft Word, Chrome, and macOS seeking convenient browser extensions","User-friendly interface
+Offers a free plan with basic features
+Provides browser extensions for convenient use
+Offers paraphrasing, summarizing, and plagiarism checking
+Provides a language translator
+Affordable premium plan with additional features
+Useful for students, academics, and writers","Free plan with basic features
+Premium plan: $14.99/month or $79.99/year, offering additional features such as unlimited words, more tones, and a plagiarism checker",
+Canva,"I-powered design tools, including Magic Design™ (Beta) and Magic Studio tools
+Browser extensions (Chrome, Microsoft Word, macOS)
+User-friendly interface
+Content summarization
+Creating presentation, brochure, social media images, videos and gifs to posters, websites, and booklets. ","Professionals and aspiring creators seeking AI-powered design tools
+Users of Microsoft Word, Chrome, and macOS seeking convenient browser extensions","Offers a range of AI-powered design tools
+Provides browser extensions for convenient use
+Offers a user-friendly interface
+Provides grammar checking, content summarization, and citation creation
+Useful for professionals and aspiring creators","Canva Pro: $119.99/year for one person
+Canva Teams: Minimum of three people
+AI features are included in the Canva Pro and Teams plans",
+Grammarly,"AI Writing Tools
+Paraphrasing Tool
+Tone Detector
+Style Guide
+Snippets
+Summarizing Tool
+Generative AI Assistance
+Browser Extensions (Chrome, Microsoft Word, macOS)
+User-Friendly Interface
+Grammar Checking
+Content Summarization
+Citation Creation","Professionals, students, and anyone looking to improve their writing
+Users of Microsoft Word, Chrome, and macOS seeking convenient browser extensions","Offers a range of AI-powered writing tools
+Provides browser extensions for convenient use
+Offers a user-friendly interface
+Provides grammar checking, content summarization, and citation creation
+Useful for professionals, students, and anyone looking to improve their writing","Free plan: Essentials to start writing with AI assistance, 100 prompts/month
+Premium plan: Robust AI features, including generative AI assistance, unlimited prompts, and suggestions for improved communication",
+SCI Space,"AI-driven platform for exploring, understanding, and publishing research papers
+Comprehensive searchable database of over 270 million papers, authors, topics, journals, and conferences
+Plagiarism checker
+Journal submission
+XML converters
+AI copilot to decode any research paper
+Personalized recommendations of popular papers, topics, and conferences
+Gallery of over 40,000 journal templates","Researchers and academics seeking to explore, understand, and publish research papers","Offers a comprehensive searchable database of over 270 million papers, authors, topics, journals, and conferences
+Provides a variety of features such as a plagiarism checker, journal submission, XML converters, and an AI copilot to decode any research paper
+Offers personalized recommendations of popular papers, topics, and conferences
+Provides a gallery of over 40,000 journal templates
+Streamlines the publishing process","Basic (Free): Offers basic features such as output previews, spellcheck, suggestions, track changes, and bibliography management
+Researcher: $8.00/month, offers additional features such as unlimited output previews, unlimited bibliographies, and 1000 words per download
+Team: $6.00/user/month, offers additional features such as team collaboration, shared library, and team analytics
+University: Custom pricing, offers additional features such as institutional branding, custom templates, and dedicated support",
+Explain Paper,"AI-powered research paper tool
+Upload a paper and highlight confusing text
+Get an explanation of the highlighted text
+Simplifies and explains complex concepts
+Offers AI explanations for dense sections
+Provides a user-friendly interface",Researchers and academics seeking to simplify and understand complex research papers,"Offers an AI-powered solution to simplify and explain complex research papers
+Allows users to upload a paper and highlight confusing text for explanation
+Provides a user-friendly interface
+Helps users quickly understand complex topics","You can start using Explainpaper for free. Nevertheless, to access all features, you need to upgrade the plan, with its pricing starting at around $12 per month.",
+Tavily AI,"Searches internet for user queries, summarizes relevant information, avoids hallucinated answers, useful for market insights.",Researchers and academics seeking to simplify and expedite the research process,"Rapid research results
+User-friendly interface
+Feedback mechanism
+In-depth research capabilities
+Collaboration capabilities
+Includes comprehensive sources
+Allows source prioritization
+Caters to individual users
+Cater to enterprise-level
+Delivers insights to inbox
+Wide range research topics
+Expert review for accuracy
+Offers direct research results
+Objective based research
+Allows sharing research findings
+Open in Github feature
+Community via Discord
+Automated research process
+Informed decision making aidProvides in-depth research and intelligent query suggestions and answers","Free tier: Basic features
+Solo: $40/month, offers full API access, 10,000 API calls (monthly), basic and advanced search, research assistant, and personalized support
+Startup: $100/month, offers 30,000 API calls (monthly), $0.005 per API call after limit, basic and advanced search, research assistant, and personalized support
+University: Custom pricing, offers institutional branding, custom templates, and dedicated support
+Publisher: Custom pricing, offers automated typesetting, XML conversion, and API access",
+Consensus,"AI-powered search engine for scientific research
+Aggregates findings directly from scientific studies
+Provides evidence-based answers faster
+Offers a user-friendly interface",Researchers and academics seeking to quickly find answers to scientific research questions,"Quick answers from research
+Extracts key findings
+Uses peer-reviewed research
+Search is 100% ad-free
+Evidence-based answers
+Information from scientific community
+Free Beta accessible
+Instant analysis of papers
+Unbiased results
+Allows multiple queries
+Applicable for various topics
+Ad-free searching
+Results from scientific findings
+Easy to use interface
+Summary of research papers
+Excellent for academic research
+Scientific article summaries
+Contact access
+Blog available
+Company information clear
+Clear website navigation
+Sign up feature
+Diverse science topics
+Streamlined research process
+Quick query results
+No marketing bias
+Concise research presentation
+Faster review of literature
+Expedites research process
+Accessible scientific research
+Reduces research workload
+Quality source selection
+Reliable research source
+Comprehensive result display
+Search tailored to question
+Career opportunities available
+Privacy policy available
+COVID-19 research accessible
+Mindfulness research accessible
+Scientific research democratized
+Answers in seconds","Free tier: Basic features but these are more than enough to fulle use the tool.
+Premium plan: Offers additional features and benefits for 7 dollar a mount",
+Elicit,"AI-powered research tool for academic research
+Textual data analysis
+Key themes, sentiments, and patterns identification
+Summarization and visualization
+Research question generation and can find relevant papers without needing exact keyword matches and extract key information from them.",Researchers and academics seeking to simplify and expedite the research process,"Automates research workflows
+Doesn't need perfect keywords
+Extracts key paper information
+Tailored paper summaries
+Assists in brainstorming
+Summarizes texts
+Classifies texts
+Understands language models
+Helps with literature reviews
+Aids in answering research questions","Limited free usage but good enough to get you started, can use unlimited for 12 dollar per month",
+Julius AI,"Analysis of structured data from spreadsheets, Excel files, and CSV files.
+Data visualization, including the generation of visual charts and dynamic visualizations.
+Question-driven analysis, allowing users to ask data-related questions and receive instant answers.
+Statistical modeling capabilities for expert-level insights.
+Versatile data connectivity, enabling the tool to connect to various data sources such as Excel Sheets, Google Sheets.","Julius AI is suitable for a diverse user base, including students, researchers, and business users in various fields such as marketing, healthcare, academia, and economics. It is designed to make data analysis accessible to individuals without a background in data science or statistics
+","User-friendly interface.
+Time and effort-saving through automation of data analysis.
+Data visualization capabilities, including the creation of dynamic visualizations.
+Strict access control and data privacy measures. Using AI, analyze, visualize, and animate complex data in multiple formats (Excel, CSV, Google Sheets, etc.).
+The free plan offers fifteen monthly messages to Julius.
+The user-friendly interface is great for beginners looking to simplify data analysis.
+Julius AI prioritizes data security with strict access control measures (read their Privacy Policy to learn more).
+Download and share conversations and visualizations effortlessly with your team.
+There are plenty of resources, guides, case studies, and more to get you on the right foot.
+Excellent support (chatbot, email, and Discord community).
+Available on iOS and Android devices.
+ChatGPT plugin.","Free plan with limitations, including the ability to send up to 15 messages per month.
+Paid plans: Basic, Essential, and Pro, with the option for monthly or annual payment.
+Discounts for students and teachers, with a 30% discount for annual plans and a 50% discount for eligible users.",
+Einblick,"Data visualization, including the generation of visually appealing charts and graphs.
+Support for various file formats, such as Excel, JSON, and Google Sheets.
+Seamless integration with data storage methods, eliminating the need for extensive pre-processing.
+User-friendly interface, making it accessible to users without advanced data analytics skills.","Einblick AI (ChartGen AI) is designed for users who may not have advanced data analytics skills, providing an efficient solution for individuals or teams looking to visualize their data without the need for complex technical skills or time-consuming data preparation","Chart-generation AI tool, uploads datasets, quickly generates visual representations of data, completely free to use.",completely free to us chartgen function. To use all Einblick capabilities there are premium plans starting from 9 dollar a month,
+Heuristica,"AI-powered mind-mapping tool that helps users organize their thoughts and ideas visually.
+Simplifies the process of visually learning, researching, and creating concept mind-maps, making it easier for users to understand and develop their ideas.
+User-friendly interface that saves time and effort, allowing users to focus on the content itself.","Heuristica AI is suitable for students, researchers, and anyone interested in expanding their knowledge. It is designed to simplify the process of organizing and understanding complex topics visually",,Free to use when making an account.,
+Monkeylearn,"Text analysis platform that allows businesses to automatically analyze their data using machine learning.
+Access to powerful text analysis tools that categorize data by sentiment, topic, and more.
+User-friendly interface that requires no prior coding knowledge.
+Ability to classify texts with custom categories or tags for sentiment analysis, topic detection, product classification, aspects detection, and much more.
+Extraction models to extract data from text. There main feature is their free word cloud generator.",MonkeyLearn is suitable for businesses of all sizes seeking to enhance their customer experience and make data-driven decisions by transforming unstructured customer data into valuable insights. It is designed to democratize the power of machine learning and make it accessible to users without advanced technical skills,,Offers some free tools such as word cloud generators and text analysis. However paid plans are more for entire businesses rather than individual usage.,
+Otter.ai,"Real-time transcription and note-taking tool that generates rich notes for meetings, interviews, lectures, and other important voice conversations.
+AI-powered assistant for note-taking, meeting highlights, and transcription.
+Integration with Zoom, Teams, and Meet.
+Custom vocabulary, speaker identification, and time codes.
+Centralized billing and user management.
+Reporting and analytics.
+Two-factor authentication and comment folders.
+Available on iOS, Android, and web.",Otter.ai is suitable for businesses of all sizes seeking to enhance their productivity and make data-driven decisions by transforming unstructured customer data into valuable insights. It is designed to democratize the power of machine learning and make it accessible to users without advanced technical skills,"User-friendly interface that requires no prior coding knowledge.
+AI-powered transcription and note-taking tool that generates rich notes for meetings, interviews, lectures, and other important voice conversations.
+Integration with Zoom, Teams, and Meet.","Basic: Free
+Pro: $16.99 per month (originally $12.99)
+Business: $30 per month
+Enterprise: Contact Sales for pricing",
+Fireflies.ai,"AI-powered meeting assistant that records, transcribes, and automates meeting note-taking.
+Integration with various video-conferencing apps, dialers, and audio files.
+User-friendly interface that requires no prior coding knowledge.
+Ability to classify texts with custom categories or tags for sentiment analysis, topic detection, product classification, aspects detection, and much more.
+Extraction models to extract data from text.
+Integration with Zoom, Teams, and Meet.","Fireflies AI is suitable for businesses of all sizes seeking to enhance their productivity and make data-driven decisions by transforming unstructured customer data into valuable insights. It is designed to democratize the power of machine learning and make it accessible to users without advanced technical skills
+","User-friendly interface that requires no prior coding knowledge.
+AI-powered meeting assistant that records, transcribes, and automates meeting note-taking.
+Integration with various video-conferencing apps, dialers, and audio files.
+Advanced exporting, App & CRM integrations on the Pro and Business tiers.No dedicated cons available.","Free: Basic features, limited transcription credits
+Pro: $19.99 per month (originally $14.99), 1000 transcription credits, advanced exporting, App & CRM integrations
+Business: $49.99 per month (originally $39.99), 2000 transcription credits, API access, analytics, private channels, video recording, and other advanced team features",
+Scribe,"Automated Documentation: Scribe AI uses generative AI to create company-specific processes tailored to your unique business, automating the most dreaded part of work: documentation
+Integration with Web Apps: Scribe AI works with any web app on any browser, making it easy to create and customize guides on any platform
+Quick Customization: The tool offers quick and efficient creation of tutorials and guides, with a wide range of customization options for content
+Branded Guides: Scribe AI allows users to create branded guides with their company's logo and colors, removing the Scribe branding
+Export Formats: Users can export guides to HTML, Confluence, and Markdown formats
+Desktop Capture: Scribe AI can capture processes on desktop-based applications
+Multiple Workspaces: The tool allows users to manage documents and users across multiple teams, with admins able to review and approve new guides before publishing them to the company's workspace
+Review & Approval Queue: Scribe AI offers a review and approval queue for managing the publishing process
+Sensitive Data Redaction: The tool can redact sensitive information from screenshots
+Smart Embed: Scribe AI allows users to embed their guides and pages into knowledge bases, wikis, and more","Scribe AI is designed to simplify the process of creating educational guides and documentation, making it beneficial for teachers, students, and businesses.",,"Free Plan: This plan allows users to create how-to guides in a few clicks, works with any web app on any browser, offers quick customization, and allows for easy sharing of links in seconds. Up to 10 guides and Pages.
+Pro Plan: The Pro plan is priced at $29 per month and offers additional features such as branded guides, export to more formats (HTML & Markdown), and the ability to export to Confluence.",
+ClassPoint AI,"AI-powered presentation tool that enhances PowerPoint presentations with interactive questions, gamification, and feedback collection.
+Customizable templates, drag and drop functionality, and reporting/analytics.
+Integration with PowerPoint, Q&A, and live results tracking.
+Blended learning, assessments, and visualization/presentation tools.
+Content import/export and PowerPoint conversion.","ClassPoint AI is suitable for educators, trainers, and presenters looking to enhance their PowerPoint presentations with interactive elements, gamification, and feedback collection. It is designed to make presentations more engaging and effective, with a range of customizable templates and tools","AI-powered presentation tool that enhances PowerPoint presentations with interactive questions, gamification, and feedback collection.
+Customizable templates, drag and drop functionality, and reporting/analytics.
+Integration with PowerPoint, Q&A, and live results tracking.","Basic: Free, limited class size and features.
+Pro: $8/month or $96 billed annually, unlimited engagement for sessions, up to 200 class size, 500 AI quiz credits, and advanced gamification.
+School: Custom pricing, includes all features of the Pro plan, with additional tools and personalized support.",
+GradeScope,"AI-assisted grading that groups similar answers together, eliminating redundancies and enabling higher quality, more consistent feedback.
+Item-level statistics that give instructors immediate and actionable feedback on student progress.
+Dynamic rubrics that can be built in advance or created on the fly, allowing for collaborative construction and real-time adjustments.
+Fast grading and effective feedback that accelerates the grading process, increases feedback consistency, and provides clear insights into student learning trends in real time.
+Support for various assignment types, including paper-based, bubble sheet, digital, and code assignments.
+Detailed analytics that help instructors get a clear picture of student performance and address potential learning gaps through department-level metrics.
+Scoring consistency and workflow management that supports scoring consistency across multiple graders and provides an optional process workflow for item-level regrade request management.
+Integration with learning management systems such as Canvas to facilitate the grading of paper and digital assignments.
+Optical character recognition (OCR) and AI assistance that efficiently grades and provides substantive feedback on various assignment types, reducing manual grading time.
+AI-driven answer grouping that enables instructors to sort student answers into groups and grade whole groups at once, saving time and providing clearer feedback to students.","Gradescope is suitable for educators, instructors, and institutions seeking to streamline the assessment and grading process, improve feedback consistency, and gain valuable insights into student learning. It is designed to transform grading into a learning experience, offering fast grading, effective feedback, and clear insights to support instructors in delivering high-quality assessments at scale","AI-assisted grading that groups similar answers together, eliminating redundancies and enabling higher quality, more consistent feedback.
+Fast grading and effective feedback that accelerates the grading process, increases feedback consistency, and provides clear insights into student learning trends in real time.
+Detailed analytics that help instructors get a clear picture of student performance and address potential learning gaps through department-level metrics.","Basic Plan: Free, limited class size and features.
+Pro Plan: $8/month or $96 billed annually, unlimited engagement for sessions, up to 200 class size, 500 AI quiz credits, and advanced gamification.
+School Plan: Custom pricing, includes all features of the Pro plan, with additional tools and personalized support.",
+PowerPoint Speaker Coach,"AI-powered tool that helps users refine their presentation skills by providing real-time feedback on pacing, pitch, filler words, informal speech, euphemisms, and culturally sensitive terms.
+Detects when users are reading from their slides too much or simply reading the text on a slide.
+Provides a report after each rehearsal with statistics and suggestions for improvements.
+Compatible with Microsoft Edge version 15 or later, Chrome version 52 or later, and Firefox version 52 or later.","PowerPoint Speaker Coach AI is suitable for individuals looking to improve their presentation skills and refine their public speaking abilities. It is designed to help users prepare for presentations, rehearse their slide shows, and receive feedback on their performance","Helps users prepare in private to give more effective presentations.
+Provides real-time feedback on various aspects of a presentation, such as pacing, pitch, and use of filler words.
+Offers suggestions for improvements after each rehearsal.
+Compatible with multiple web browsers.","Free, with limited features.",
+Merlin AI,"AI-powered Chrome extension that streamlines browsing experience and enhances productivity.
+Provides real-time AI-powered assistance for various tasks, such as writing emails, summarizing articles, and answering questions.
+Offers a user-friendly interface and easy installation.
+Available in multiple languages.
+Provides suggestions for improvements after each use.
+Compatible with multiple web browsers.","Merlin AI is suitable for individuals looking to streamline their browsing experience and enhance their productivity. It is designed to help users automate tasks and swiftly deliver the information they need, saving time and increasing creativity","Easy to use and install.
+AI-powered assistance for various tasks, such as writing emails, summarizing articles, and answering questions.
+Provides suggestions for improvements after each use.
+Available in multiple languages.
+Compatible with multiple web browsers.","Free, with limited features.",
