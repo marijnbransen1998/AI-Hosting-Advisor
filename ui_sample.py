@@ -14,7 +14,7 @@ import pandas as pd
 
 def ask_question(prompt):
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo-1106",  # you can replace this with your preferred model
+        model="gpt-3.5-turbo-16k",  # you can replace this with your preferred model
         messages=[{"role": "user", "content": prompt}],
         max_tokens=400
     )
@@ -44,7 +44,7 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools2_csv):
 
     # Call the OpenAI API
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo-1106",  
+        model="gpt-3.5-turbo-16k",  
         messages=[{"role": "user", "content": prompt}]
     )
 
