@@ -1,10 +1,9 @@
-from dotenv import load_dotenv
 import streamlit as st
 import os
-# Load environment variables from .env file
-load_dotenv()
-# Now you can access your API keys (and other environment variables)
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+# set openai api key for streamlit
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+openai.api_key = OPENAI_API_KEY
+
 
 import openai
 import pandas as pd
