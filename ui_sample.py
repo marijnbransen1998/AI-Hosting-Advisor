@@ -1,19 +1,17 @@
 import streamlit as st
 import os
 # set openai api key for streamlit
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-openai.api_key = OPENAI_API_KEY
-
 
 import openai
 import pandas as pd
 
 # Set your OpenAI API key here
-#openai.api_key = 'your-api-key'
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+openai.api_key = OPENAI_API_KEY
 
 def ask_question(prompt):
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo-16k",  # you can replace this with your preferred model
+        model="gpt-3.5-turbo-1106",  # you can replace this with your preferred model
         messages=[{"role": "user", "content": prompt}],
         max_tokens=400
     )
@@ -43,7 +41,7 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools2_csv):
 
     # Call the OpenAI API
     completion = openai.chat.completions.create(
-        model="gpt-3.5-turbo-16k",  
+        model="gpt-3.5-turbo-1106",  
         messages=[{"role": "user", "content": prompt}]
     )
 
