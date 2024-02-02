@@ -27,17 +27,30 @@ def ask_question(prompt):
    # return completion.choices[0].message.content
 
 
-def recommend_hosting_with_ai(dialog, transposed_ai_tools2_csv):
+def recommend_hosting_with_ai(dialog, transposed_ai_tools7_csv):
     # Read the CSV data into a string format suitable for the prompt
-    hosting_data = pd.read_csv(transposed_ai_tools2_csv)
+    hosting_data = pd.read_csv(transposed_ai_tools7_csv)
     hosting_data_string = hosting_data.to_string(index=False)
 
-# construct the prompt
+    # construct the prompt
     prompt = (f"Based on the following user answers:\n{dialog}\n\n"
-          f"You are an AI tool advisor. Use the following AI tools data to find matches. Prioritize tools that have features closely matching the user's request:\n{hosting_data_string}\n\n"
-          "Recommend AI tools that best fit the user's specified needs. List maximum 7 tools starting with the best recommendation to the least best recommendation. For each tool, provide the tool name in **bold**, followed by sections for **Pricing**, **Website**, and **Explanation**, each labeled in **bold**. Explain why each tool is a good match based on the features mentioned. Note: Recommendations should be based solely on the provided data and not on external knowledge.\n\n"
-          "After the listings of the tools please make sure to inform the user that these recommendations are based on the article 'The 21 Best AI Tools' from tilburg.ai and for more options to find specific AI tools, they can visit: https://www.futuretools.io/")
-
+          f"Act as an AI tool advisor. Use the AI tools data from {hosting_data_string} to match AI tools with the user's needs from the {dialog}. Focus on tools whose 'Features', 'Suitable For', and 'Pros' from the {hosting_data_string} that align with the user's requirements:\n{dialog}\n\n"
+          "Recommendations:\n"
+    "- List all the tools from the {hosting_data_string} dataset that match with the user requests from the {dialog}\n" 
+    "- List at least 7 recommendations of possible tools \n" 
+    "- Please match them mainly on the basis of keyword match.\n"
+    "- Try to list tools that are matching and DO NOT make up matches. If a tool is not an exact match than tell this in the explanation.\n" 
+    "- In any case do not list more than 10 tools.\n"
+    "- For each tool, include:\n"
+    "   - **Name** (in bold)\n"
+    "   - **Pricing** (in bold)\n"
+    "   - **Website Link** (in bold)\n"
+    "   - **Explanation** (in bold): Detail in minumum two sentences how each tool matches the user's needs based on their answers in 'dialog' and the tool's features, pros, and suitability from {hosting_data_string}.\n"
+    "Note: Base recommendations solely on the {dialog} and {hosting_data_string} data.\n\n"
+    "Closing Note:\n"
+    "- Inform the user that recommendations are based on 'The 21 Best AI Tools' from tilburg.ai and may not be entirely accurate.\n"
+    "- Inform the user that they generate recommendations more than once by simply changing their answers. \n"
+    "- Inform the user that For more AI tool options, they can visit https://www.futuretools.io/ or read the full article at https://tilburg.ai/2024/01/best-ai-tools-for-university-students/\n")
 
     # Call the OpenAI API
     completion = openai.chat.completions.create(
@@ -50,17 +63,40 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools2_csv):
 
 
 def main():
+    # Add the code to display the logo here
+    logo_path = 'tilburg-ai.png'  # Replace with the actual path to your logo image
+    # Define custom CSS style for logo positioning and size
+    logo_css = """
+    <style>
+        /* Custom CSS styles for logo positioning and size */
+        .logo-container {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed for top-left */
+        }
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+        }
+    </style>
+    """
+    
+    # Apply custom CSS for logo positioning and size
+    st.markdown(logo_css, unsafe_allow_html=True)
+    
+     # Display the logo image
+    st.image(logo_path, caption='', use_column_width=False)
+    
     st.title("AI tool advisor for students")  # Set a title for your app
 
     # Load hosting data from CSV
-    file_path = 'transposed_ai_tools2.csv'  # Update this with the path to your CSV file
+    file_path = 'transposed_ai_tools7.csv'  # Update this with the path to your CSV file
 
     # Define the questions you're going to ask the user
     questions = [
-        "What specific tasks or needs do you have for the AI tool? (e.g., writing assistance, finding papers, data analysis, presentation creation, meeting assistant)",
-        "What is your budget for using AI tools? (e.g., free, free but with paid features, premium with specific monthly/annual budget)",
-        "Are there specific features you are looking for in an AI tool? (e.g. plagiarism checking, guides and documentation, quick web research, text summarization, voice transcripts, mind-maps, word clouds)",
-        "What is the primary motivation behind your search for an AI tool? (e.g., time saving, improved results, efficiency, research)"
+        "What is your role? (Student, Teacher, Researcher, Academic, Professional, etc",
+        "What specific tasks or needs do you have for the AI tool? (e.g., writing, coding support, only free tools, finding papers for thesis, data analysis). **Try to be as specific as possible!**"
     ]
 
     # Initialize an empty dictionary to hold the user responses
@@ -76,19 +112,19 @@ def main():
     # Check if all questions have been answered
     all_answered = all(user_responses.values())
 
-    if st.button('Get AI tool Recommendation', key='get_recommendation') and all_answered:
-        # Display a message indicating that the recommendation is being generated
-        with st.spinner('Generating recommendations... This may take up to 1 minute to get the best results. Thank you for your patience.'):
-            dialog = "\n".join(f"Q: {q}\nA: {a}" for q, a in user_responses.items())
-            recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
-        # Indentation starts here for the block under the if statement
-            dialog = "\n".join(f"Q: {q}\nA: {a}" for q, a in user_responses.items())
-            recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
-        # st.text_area("Recommended AI tool(s)", value=recommended_hosting, height=300)
-        st.markdown(recommended_hosting, unsafe_allow_html=True)
-    elif st.button('Check if all questions answered', key='check_answers') and not all_answered:
-        # Indentation starts here for the block under the elif statement
-        st.error("Please answer all questions before getting recommendations.")
+    if st.button('Get AI tool Recommendation', key='get_recommendation'):
+        if all_answered:
+            # Display a message indicating that the recommendation is being generated
+            with st.spinner('Generating recommendations... This may take up to 1 minute to get the best results. Thank you for your patience.'):
+                dialog = "\n".join(f"Q: {q}\nA: {a}" for q, a in user_responses.items())
+                recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
+            # Indentation starts here for the block under the if statement
+                dialog = "\n".join(f"Q: {q}\nA: {a}" for q, a in user_responses.items())
+                recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
+            # st.text_area("Recommended AI tool(s)", value=recommended_hosting, height=300)
+            st.markdown(recommended_hosting, unsafe_allow_html=True)
+        else:
+            st.error("Please answer all questions before getting recommendations.")
 
 if __name__ == "__main__":
     main()
