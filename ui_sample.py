@@ -98,7 +98,7 @@ def main():
     # Initialize an empty dictionary to hold the user responses
     user_responses = {}
 
-    st.markdown(" Welcome to the AI tool advisor! Curious to discover what AI tools are available to support you? Simply answer below and get a response.") # Display a welcome message
+    st.markdown(" Welcome to the AI tool advisor! Curious to discover what AI tools are available to support you? Simply answer the questions below and get a response.") # Display a welcome message
 
     # Create input boxes for each question
     for question in questions:
