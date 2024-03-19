@@ -48,9 +48,10 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools7_csv):
     "   - **Explanation** (in bold): Detail in minumum two sentences how each tool matches the user's needs based on their answers in 'dialog' and the tool's features, pros, and suitability from {hosting_data_string}.\n"
     "Note: Base recommendations solely on the {dialog} and {hosting_data_string} data.\n\n"
     "Closing Note:\n"
-    "- Inform the user that recommendations are based on 'The 21 Best AI Tools' from tilburg.ai and may not be entirely accurate.\n"
+    "- Inform the user that recommendations are based on 'The 22 Best AI Tools in Education' from tilburg.ai and may not be entirely accurate.\n"
+    "- Inform the user with a Disclaimer:Recommendations may not reflect the policies of Tilburg University on the use of AI. For policies check https://tilburg.ai/disclaimer/.\n"
     "- Inform the user that they generate recommendations more than once by simply changing their answers. \n"
-    "- Inform the user that For more AI tool options, they can visit https://www.futuretools.io/ or read the full article at https://tilburg.ai/2024/01/best-ai-tools-for-university-students/\n")
+    "- Inform the user that For more AI tool options, they can visit https://www.futuretools.io/ or read the full article at https://tilburg.ai/2024/01/best-ai-education-tools/\n")
 
     # Call the OpenAI API
     completion = openai.chat.completions.create(
@@ -88,7 +89,7 @@ def main():
      # Display the logo image
     st.image(logo_path, caption='', use_column_width=False)
     
-    st.title("AI tool advisor for students")  # Set a title for your app
+    st.title("AI tool advisor for Students & Faculty")  # Set a title for your app
 
     # Load hosting data from CSV
     file_path = 'transposed_ai_tools7.csv'  # Update this with the path to your CSV file
@@ -102,7 +103,7 @@ def main():
     # Initialize an empty dictionary to hold the user responses
     user_responses = {}
 
-    st.write("Welcome to the AI tool advisor for University students!")  # Display a welcome message
+    st.write("Welcome to the AI tool advisor! Curious to discover what AI tools are available to support you? Simply answer below and get a response.")  # Display a welcome message
 
     # Create input boxes for each question
     for question in questions:
