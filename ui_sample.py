@@ -36,23 +36,18 @@ def recommend_hosting_with_ai(dialog, transposed_ai_tools7_csv):
     prompt = (f"Based on the following user answers:\n{dialog}\n\n"
           f"Act as an AI tool advisor. Use the AI tools data from {hosting_data_string} to match AI tools with the user's needs from the {dialog}. Focus on tools whose 'Features', 'Suitable For', and 'Pros' from the {hosting_data_string} that align with the user's requirements:\n{dialog}\n\n"
           "Recommendations:\n"
-    "- List all the tools from the {hosting_data_string} dataset that match with the user requests from the {dialog}\n" 
-    "- List at least 7 recommendations of possible tools \n" 
+    "- List all the tools from the {hosting_data_string} dataset that match with the user requests from the {dialog}.\n" 
+    "- List the best 4 recommendations of possible tools in bullet points and in order from 1 to 4. IF MORE THAN 4 TOOLS CAN BE LISTED THAN LIST MORE THAN 4 TOOLS BUT NOT MOR THAN 7 BUT IF YOU CAN FIND LESS THAN 4 RECOMMENDATIONS THAT LIST LESS THAN 4. \n" 
     "- Please match them mainly on the basis of keyword match.\n"
-    "- Try to list tools that are matching and DO NOT make up matches. If a tool is not an exact match than tell this in the explanation.\n" 
+    "- Try to list tools that are matching and DO NOT LIST MATCHES THAT ARE NOT ACCURATE. DO NOT TRY TO CREATE MATCHES THAT ARE NOT TRUE. \n" 
     "- In any case do not list more than 10 tools.\n"
-    "- For each tool, include:\n"
+    "- For each tool make 4 bullet points that include:\n"
     "   - **Name** (in bold)\n"
     "   - **Pricing** (in bold)\n"
     "   - **Website Link** (in bold)\n"
-    "   - **Explanation** (in bold): Detail in minumum two sentences how each tool matches the user's needs based on their answers in 'dialog' and the tool's features, pros, and suitability from {hosting_data_string}.\n"
-    "Note: Base recommendations solely on the {dialog} and {hosting_data_string} data.\n\n"
-    "Closing Note:\n"
-    "- Inform the user that recommendations are based on 'The 22 Best AI Tools in Education' from tilburg.ai and may not be entirely accurate.\n"
-    "- Inform the user with a Disclaimer:Recommendations may not reflect the policies of Tilburg University on the use of AI. For policies check https://tilburg.ai/disclaimer/.\n"
-    "- Inform the user that they generate recommendations more than once by simply changing their answers. \n"
-    "- Inform the user that For more AI tool options, they can visit https://www.futuretools.io/ or read the full article at https://tilburg.ai/2024/01/best-ai-education-tools/\n")
-
+    "   - **Explanation** (in bold): Detail in minumum two sentences how each tool matches the user's needs based on their answers in {dialog} and the tool's features, pros, and suitability from {hosting_data_string}.\n"
+    "Note: Base recommendations solely on the {dialog} and {hosting_data_string} data.\n\n")
+    
     # Call the OpenAI API
     completion = openai.chat.completions.create(
         model="gpt-3.5-turbo-1106",  
@@ -96,14 +91,14 @@ def main():
 
     # Define the questions you're going to ask the user
     questions = [
-        "What is your role? (Student, Teacher, Researcher, Academic, Professional, etc",
+        "What is your role? (Student, Teacher/Lecturer, Researcher, Academic, Professional, etc)",
         "What specific tasks or needs do you have for the AI tool? (e.g., writing, coding support, only free tools, finding papers for thesis, data analysis). **Try to be as specific as possible!**"
     ]
 
     # Initialize an empty dictionary to hold the user responses
     user_responses = {}
 
-    st.write("Welcome to the AI tool advisor! Curious to discover what AI tools are available to support you? Simply answer below and get a response.")  # Display a welcome message
+    st.markdown(" Welcome to the AI tool advisor! Curious to discover what AI tools are available to support you? Simply answer below and get a response.") # Display a welcome message
 
     # Create input boxes for each question
     for question in questions:
@@ -124,6 +119,15 @@ def main():
                 recommended_hosting = recommend_hosting_with_ai(dialog, file_path)
             # st.text_area("Recommended AI tool(s)", value=recommended_hosting, height=300)
             st.markdown(recommended_hosting, unsafe_allow_html=True)
+            # Display the disclaimer text after the recommendations
+            disclaimer_text = """
+            <ul style='font-size: smaller; font-style: italic;'>
+            <li><b>Disclaimer:</b> Recommendations may not reflect the <a href="https://tilburg.ai/disclaimer/" target="_blank">policies</a> of <a href="https://www.tilburguniversity.edu/" target="_blank">Tilburg University</a> on the use of AI.</li>
+            <li><b>Quick sidenote:</b> Recommendations are based on '<a href="https://tilburg.ai/2024/01/best-ai-education-tools/" target="_blank">The 22 Best AI Tools in Education</a>' from <a href="https://tilburg.ai" target="_blank">tilburg.ai</a> and may not be entirely accurate.</li>
+            <li>For more AI tool options, please visit <a href="https://www.futuretools.io/" target="_blank">Future tools</a> or read the <a href="https://tilburg.ai/2024/01/best-ai-education-tools/" target="_blank">full article</a> at tilburg.ai.</li>
+            </ul>
+            """
+            st.markdown(disclaimer_text, unsafe_allow_html=True)
         else:
             st.error("Please answer all questions before getting recommendations.")
 
