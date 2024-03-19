@@ -108,7 +108,7 @@ def main():
     # Check if all questions have been answered
     all_answered = all(user_responses.values())
 
-    if st.button('Get AI tool Recommendation', key='get_recommendation'):
+    if st.button('Get AI tool Recommendation now!', key='get_recommendation'):
         if all_answered:
             # Display a message indicating that the recommendation is being generated
             with st.spinner('Generating recommendations... This may take up to 1 minute to get the best results. Thank you for your patience.'):
